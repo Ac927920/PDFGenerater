@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Invoices">
+
+    <TextView
+        android:id="@+id/salesInvoice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:text="Sales Invoice"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/guidelineV11"/>
+
+    <ImageView
+        android:id="@+id/invoiceLogo"
+        android:layout_width="70dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_launcher_background"
+        android:layout_marginStart="7dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guidelineV11"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineV1"/>
+    <TextView
+        android:id="@+id/companyName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:text="Four Leaf Clover Agro Pvt. Ltd."
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/invoiceLogo"
+        app:layout_constraintTop_toTopOf="@id/guidelineV11" />
+
+    <TextView
+        android:id="@+id/AddressHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:text="Address:"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/invoiceLogo"
+        app:layout_constraintTop_toBottomOf="@id/companyName" />
+
+    <TextView
+        android:id="@+id/SallerAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        tools:text="Shop No 2 Balaji bus"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@id/AddressHeader"
+        app:layout_constraintEnd_toStartOf="@id/guidelineH3"
+        app:layout_constraintTop_toBottomOf="@id/companyName" />
+    <TextView
+        android:id="@+id/pinCodeHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:text="Pin Code:"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/invoiceLogo"
+        app:layout_constraintBottom_toTopOf="@id/StateHeader" />
+
+    <TextView
+        android:id="@+id/pinCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toTopOf="@id/state"
+        app:layout_constraintEnd_toStartOf="@id/guidelineH3"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@id/pinCodeHeader"
+        app:layout_constraintTop_toTopOf="@+id/pinCodeHeader"
+        tools:text="243201" />
+    <TextView
+        android:id="@+id/StateHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:text="State:"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/invoiceLogo"
+        app:layout_constraintBottom_toTopOf="@id/ContactHeader" />
+
+    <TextView
+        android:id="@+id/state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        tools:text="Haryana"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@id/StateHeader"
+        app:layout_constraintEnd_toStartOf="@id/guidelineH3"
+        app:layout_constraintTop_toTopOf="@id/StateHeader"
+        app:layout_constraintBottom_toTopOf="@id/contact" />
+
+    <TextView
+        android:id="@+id/ContactHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:text="Contact No:"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/invoiceLogo"
+        app:layout_constraintBottom_toTopOf="@id/guidelineV1" />
+    <TextView
+        android:id="@+id/contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        tools:text="1234567890"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@id/ContactHeader"
+        app:layout_constraintEnd_toStartOf="@id/guidelineH3"
+        app:layout_constraintBottom_toTopOf="@id/guidelineV1" />
+
+    <TextView
+        android:id="@+id/BayerNameHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:text="Buyer Name:"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guidelineV1" />
+    <TextView
+        android:id="@+id/BayerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        tools:text="Chirag"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@id/BayerNameHeader"
+        app:layout_constraintEnd_toStartOf="@id/guidelineH3"
+        app:layout_constraintTop_toTopOf="@id/BayerNameHeader"
+        app:layout_constraintTop_toBottomOf="@id/guidelineV1" />
+    <TextView
+        android:id="@+id/BayerAddressHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:text="Address:"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/BayerNameHeader" />
+    <TextView
+        android:id="@+id/BayerAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        tools:text="Shop No 2 Balaji bus"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@id/BayerAddressHeader"
+        app:layout_constraintEnd_toStartOf="@id/guidelineH3"
+        app:layout_constraintTop_toTopOf="@id/BayerAddressHeader"
+        app:layout_constraintTop_toBottomOf="@id/BayerNameHeader" />
+    <TextView
+        android:id="@+id/BayerMobileHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:text="Mobile:"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/guidelineV2" />
+    <TextView
+        android:id="@+id/BayerMobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        tools:text="8576839351"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@id/BayerMobileHeader"
+        app:layout_constraintEnd_toStartOf="@id/guidelineH3"
+        app:layout_constraintTop_toTopOf="@id/BayerMobileHeader"
+        app:layout_constraintTop_toBottomOf="@id/BayerAddressHeader" />
+
+
+
+
+    <TextView
+        android:id="@+id/SalesInvoiceDateHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sales Invoice Date"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:flow_verticalBias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guidelineH3"
+        app:layout_constraintTop_toTopOf="@id/guidelineV11" />
+    <TextView
+        android:id="@+id/SalesInvoiceDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="12/12/2001"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:flow_verticalBias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guidelineH3"
+        app:layout_constraintTop_toBottomOf="@id/SalesInvoiceDateHeader" />
+    <TextView
+        android:id="@+id/SalesInvoiceNoHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sales Invoice No"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:flow_verticalBias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guidelineH3"
+        app:layout_constraintTop_toTopOf="@id/guidelineV12" />
+    <TextView
+        android:id="@+id/SalesInvoiceNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="1221322001"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:flow_verticalBias="0.5"
+        app:layout_constraintStart_toEndOf="@id/guidelineH3"
+        app:layout_constraintTop_toBottomOf="@id/SalesInvoiceNoHeader" />
+
+
+    <TextView
+        android:id="@+id/SerialNumberHolder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sr. No"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:flow_verticalBias="0.5"
+        app:layout_constraintEnd_toEndOf="@id/guidelineH1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guidelineV2" />
+    <TextView
+        android:id="@+id/ProductsDesHolder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description of Goods"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:flow_verticalBias="0.5"
+        app:layout_constraintEnd_toEndOf="@id/guidelineH2"
+        app:layout_constraintStart_toStartOf="@id/guidelineH1"
+        app:layout_constraintTop_toBottomOf="@id/guidelineV2" />
+    <TextView
+        android:id="@+id/ProductsQntHolder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Qty"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:flow_verticalBias="0.5"
+        app:layout_constraintEnd_toEndOf="@id/guidelineH3"
+        app:layout_constraintStart_toStartOf="@id/guidelineH2"
+        app:layout_constraintTop_toBottomOf="@id/guidelineV2" />
+    <TextView
+        android:id="@+id/ProductsRateHolder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rate"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:flow_verticalBias="0.5"
+        app:layout_constraintEnd_toEndOf="@id/guidelineH4"
+        app:layout_constraintStart_toStartOf="@id/guidelineH3"
+        app:layout_constraintTop_toBottomOf="@id/guidelineV2" />
+    <TextView
+        android:id="@+id/ProductsAmountHolder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Amount"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:flow_verticalBias="0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guidelineH4"
+        app:layout_constraintTop_toBottomOf="@id/guidelineV2" />
+    <TextView
+        android:id="@+id/TotalHolder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/guidelineH2"
+        app:layout_constraintStart_toStartOf="@id/guidelineH1"
+        app:layout_constraintTop_toBottomOf="@id/guidelineV3"
+        app:layout_constraintBottom_toTopOf="@id/guidelineV4"/>
+    <TextView
+        android:id="@+id/TotalUnits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="4"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/guidelineH2"
+        app:layout_constraintEnd_toEndOf="@id/guidelineH3"
+        app:layout_constraintTop_toBottomOf="@id/guidelineV3"
+        app:layout_constraintBottom_toTopOf="@id/guidelineV4"/>
+    <TextView
+        android:id="@+id/TotalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="100"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/guidelineH4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guidelineV3"
+        app:layout_constraintBottom_toTopOf="@id/guidelineV4"/>
+    <TextView
+        android:id="@+id/CustomerSignHolder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Customer's Seal and Signature"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guidelineV5" />
+    <TextView
+        android:id="@+id/companyNameHolder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="for Four Leaf Clover Agro Pvt. Ltd."
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guidelineV5" />
+    <TextView
+        android:id="@+id/AuthSigh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:text="Authorised Signatory"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <!--    <LinearLayout-->
+    <!--        android:id="@+id/layoutFirst"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:background="@drawable/background_layout"-->
+    <!--        android:orientation="vertical"-->
+    <!--        android:padding="10dp"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/guidelineV3"-->
+    <!--        app:layout_constraintEnd_toStartOf="@+id/guidelineH2"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/guidelineH1"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/guidelineV2">-->
+
+
+    <!--    </LinearLayout>-->
+
+    <!--    <LinearLayout-->
+    <!--        android:id="@+id/layoutSecond"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:background="@drawable/background_layout"-->
+    <!--        android:orientation="vertical"-->
+    <!--        android:padding="10dp"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/guidelineV3"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/guidelineH4"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/guidelineV2">-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:textColor="@color/black"-->
+    <!--            android:textSize="16sp"-->
+    <!--            tools:text="Rahul Kumar" />-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:textColor="@color/black"-->
+    <!--            android:textSize="16sp"-->
+    <!--            tools:text="Rahul Kumar" />-->
+    <!--    </LinearLayout>-->
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineH1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineH2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineH3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.7" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineH4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.83" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineV1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2"  />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineV11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.03"  />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineV12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.115"  />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineV2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4"  />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineV3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8"  />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineV4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.83"  />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineV5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.86"  />
+
+    <!-- Top Border -->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <View
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guidelineV11" />
+    <View
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        app:layout_constraintStart_toStartOf="@id/guidelineH3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guidelineV12" />
+    <View
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guidelineV1" />
+    <View
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guidelineV2" />
+    <View
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guidelineV2" />
+    <View
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guidelineV3" />
+    <View
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guidelineV4" /><View
+    android:layout_width="0dp"
+    android:layout_height="2dp"
+    android:background="@color/black"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="@id/guidelineV5" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+    <!--    <View-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="2dp"-->
+    <!--        android:background="@color/black"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/guidelineH1"-->
+    <!--        app:layout_constraintEnd_toEndOf="@+id/guidelineH2"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/guidelineV2" />-->
+
+    <!-- Bottom Border -->
+
+
+    <!-- Left Border -->
+    <View
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toTopOf="@+id/guidelineV2"
+        app:layout_constraintBottom_toBottomOf="@+id/guidelineV3"
+        app:layout_constraintStart_toStartOf="@+id/guidelineH1" />
+
+    <!-- Right Border -->
+    <View
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toTopOf="@+id/guidelineV2"
+        app:layout_constraintBottom_toBottomOf="@+id/guidelineV3"
+        app:layout_constraintEnd_toEndOf="@+id/guidelineH2" />
+    <View
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toTopOf="@id/guidelineV11"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineV3"
+        app:layout_constraintEnd_toEndOf="@+id/guidelineH3" />
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toTopOf="@id/guidelineV2"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineV3"
+        app:layout_constraintEnd_toEndOf="@+id/guidelineH4" />
+
+    <LinearLayout
+        android:id="@+id/productContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guidelineV2"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
