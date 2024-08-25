@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/invoiceLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/background_layout">
+    android:layout_height="match_parent">
     <TextView
         android:id="@+id/salesInvoice"
         android:layout_width="wrap_content"
@@ -24,7 +23,6 @@
         android:id="@+id/invoiceLogo"
         android:layout_width="70dp"
         android:layout_height="100dp"
-        android:src="@drawable/logo"
         android:layout_marginStart="7dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/guidelineV11"

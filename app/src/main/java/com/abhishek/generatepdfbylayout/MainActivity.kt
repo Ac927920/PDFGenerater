@@ -71,9 +71,6 @@ class MainActivity : AppCompatActivity() {
 //            .show()
 //    }
 
-    private fun allPermissionsGranted() = REQUIRED_PERMISSIONS.all {
-        ContextCompat.checkSelfPermission(this, it) == PackageManager.PERMISSION_GRANTED
-    }
 
     private fun showPermissionExplanationDialog() {
         AlertDialog.Builder(this)
