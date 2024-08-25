@@ -8,5 +8,3 @@ data class Product(
     val amount: Int
 )
 
-// Add Repo without Git Add <?> Commands
-
